@@ -16,13 +16,25 @@ solution();
 
 //* 시스템
 function solution() {
+  nums.sort((a, b) => a - b);
+
   let count = 0;
-  for (let p1 = 0; p1 < n; p1++) {
-    for (let p2 = p1 + 1; p2 < n; p2++) {
-      if (nums[p1] + nums[p2] === target) {
-        count++;
-      }
+  let p1 = 0;
+  let p2 = n - 1;
+  let sum = 0;
+
+  while (p1 < p2) {
+    sum = nums[p1] + nums[p2];
+    if (sum === target) {
+      count++;
+      p1++;
+      p2--;
+    } else if (sum > target) {
+      p2--;
+    } else {
+      p1++;
     }
   }
+
   console.log(count);
 }
