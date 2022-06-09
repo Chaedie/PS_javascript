@@ -7,10 +7,7 @@ const input = fs.readFileSync(filePath).toString().split('\n');
 // const n = Number(input[0]);
 
 for (let i = 0; i < input.length; i++) {
-  let nums = input[i]
-    .trim()
-    .split(' ')
-    .map((num) => Number(num));
+  let nums = input[i].split(' ').map((num) => Number(num));
   solution(nums);
 }
 
