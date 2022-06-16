@@ -1,4 +1,4 @@
-class Heap {
+class MaxHeap {
   constructor() {
     this.heap = [null];
   }
@@ -9,6 +9,10 @@ class Heap {
 
   size() {
     return this.heap.length - 1;
+  }
+
+  empty() {
+    return this.size() === 0;
   }
 
   push(value) {
@@ -24,7 +28,7 @@ class Heap {
   }
 
   pop() {
-    if (this.size() === 0) {
+    if (this.empty()) {
       return 0;
     }
     if (this.size() === 1) {
@@ -59,7 +63,7 @@ const input = require('fs').readFileSync(filePath).toString().trim().split('\n')
 
 //* 인풋 - 커스텀
 const n = Number(input[0]);
-let heap = new Heap();
+let heap = new MaxHeap();
 let answer = '';
 
 for (let i = 1; i <= n; i++) {
