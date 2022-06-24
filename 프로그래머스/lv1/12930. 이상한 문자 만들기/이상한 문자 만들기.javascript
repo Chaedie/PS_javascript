@@ -1,10 +1,7 @@
 function solution(s) {
-    
     let strs = s.split(' ');
     
-    for (let i = 0; i < strs.length; i++) {
-        strs[i] = makeWeiredStr(strs[i]);
-    }
+    strs = strs.map((str) => makeWeiredStr(str))
     
     return strs.join(' ');
 }
