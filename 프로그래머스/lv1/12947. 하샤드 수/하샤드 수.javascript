@@ -6,9 +6,6 @@ function solution(x) {
     for (let i = 0; i < strN.length; i++) {
         sum += Number(strN[i]);
     }
-    
-    if (x % sum === 0) {
-        return true;
-    }
-    return false;
+
+    return x % sum === 0;
 }
