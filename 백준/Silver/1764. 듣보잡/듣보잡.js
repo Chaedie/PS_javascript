@@ -22,12 +22,8 @@ function solution(n, m) {
     set2.add(input[i].trim());
   }
 
-  const result = [];
-  for (let word of set1) {
-    if (set2.has(word)) {
-      result.push(word);
-    }
-  }
+  const resultSet = new Set([...set1].filter((x) => set2.has(x)));
+  const result = new Array(...resultSet);
   result.unshift(result.length);
 
   return result.sort().join('\n');
