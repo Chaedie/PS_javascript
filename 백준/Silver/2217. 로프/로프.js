@@ -7,8 +7,8 @@ const [n, ...nums] = input.map((num) => +num);
 
 //* 함수 콜 (고정)
 let answer = solution(n, nums);
-// answer = typeof answer === 'number' ? answer : answer.trim();
-// console.log(answer);
+answer = typeof answer === 'number' ? answer : answer.trim();
+console.log(answer);
 
 //* 로직함수
 function solution(n, nums) {
@@ -21,6 +21,6 @@ function solution(n, nums) {
       max = nums[nums.length - 1] * nums.length;
     }
   }
-  console.log(max);
+  // console.log(max);
   return max;
 }
