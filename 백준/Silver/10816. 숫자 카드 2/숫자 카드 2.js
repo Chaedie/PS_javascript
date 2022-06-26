@@ -19,10 +19,10 @@ function solution() {
     map.set(numsA[i], (map.get(numsA[i]) || 0) + 1);
   }
 
-  let answer = '';
+  let answer = [];
   for (let i = 0; i < m; i++) {
-    answer += (map.get(numsB[i]) || 0) + ' ';
+    answer.push(map.get(numsB[i]) || 0);
   }
 
-  return answer;
+  return answer.join(' ');
 }
