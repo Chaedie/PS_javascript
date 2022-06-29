@@ -24,16 +24,16 @@ main();
 function solution() {
   let dp = [-1];
   for (let i = 0; i < 10000; i++) {
-    dp[i + 1] = d(i + 1);
+    dp[d(i + 1)] = true;
   }
 
   let answer = [];
   for (let i = 0; i < 10000; i++) {
-    if (dp.indexOf(i + 1) === -1) {
+    if (dp[i + 1] === undefined) {
       answer.push(i + 1);
     }
   }
-
+  
   return answer.join('\n');
 }
 
