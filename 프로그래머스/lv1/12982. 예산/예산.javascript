@@ -1,7 +1,5 @@
 function solution(d, budget) {
-    d.sort((a, b) => a - b);
-    console.log(d)
-    
+    d.sort((a, b) => a - b);  
     
     let money = budget;
     let count = 0;
@@ -9,7 +7,6 @@ function solution(d, budget) {
         if (money - d[i] >= 0) {
             money = money - d[i];
             count++;
-            console.log(money, d[i], count)
         } else {
             break;
         }
