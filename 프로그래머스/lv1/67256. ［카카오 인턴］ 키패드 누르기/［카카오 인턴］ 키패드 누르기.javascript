@@ -5,15 +5,7 @@ function solution(numbers, hand) {
         result : [],
         preLt : 10,
         preRt : 11,
-    }
-    
-//     numbers.map((x) => {
-//         if (x === '*') {
-//             x = 10;
-//         }
-//     })
-   
-    
+    }    
     
     let [l, r] = ['L', 'R'];
     for (let num of numbers) {
@@ -48,16 +40,8 @@ function checkNear(target, answer) {
         [0, 0], [0, 1], [0, 2],
         [1, 0], [1, 1], [1, 2],
         [2, 0], [2, 1], [2, 2], 
-        [3, 0],         [3, 2]]; // * === 10, # === 11
-    // preLt와 숫자간의 거리 재기 distLt
-    // preRt와 숫자간의 거리 재기 distRt
-    
-    // if (target === '*') {
-    //     target = 10;
-    // }
-    // if (target === '#') {
-    //     target = 11;
-    // }
+        [3, 0],         [3, 2]]; 
+    // * === 10, # === 11
     
     let x = Math.abs(pos[answer.preLt][0] - pos[target][0]);
     let y = Math.abs(pos[answer.preLt][1] - pos[target][1]);
